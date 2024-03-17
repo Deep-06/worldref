@@ -2,12 +2,13 @@ import React, { useEffect } from 'react'
 import { getProduct } from '../redux/Products/action';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
-
-// import { products } from "../db"
+ import { products } from "../db"
 export const ProductList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const products = useSelector((store) => store.productReducer.products);
+ // const products = useSelector((store) => store.productReducer.products);
+  const isAuth=useSelector((store) => store.authReducer.isAuth);
+
   useEffect(() => {
     const paramObj = {
        
@@ -28,8 +29,10 @@ export const ProductList = () => {
             <p>{e.name}</p>
             <p>Price: {e.price}</p>
             <p>Description: {e.description}</p>
-           <button style={{height:'30px',borderRadius:'10px'}} onClick={()=>navigate('/cart')}>Add to Cart</button>
-           <button style={{height:'30px',borderRadius:'10px'}} onClick={()=>navigate('/details')}>Check details</button>
+           <button style={{height:'30px',borderRadius:'10px'}} onClick={()=>navigate('/cart')} disabled={isAuth ? false : true}
+           >Add to Cart</button>
+           <button style={{height:'30px',borderRadius:'10px'}} onClick={()=>navigate('/details')} disabled={isAuth ? false : true}
+           >Check details</button>
 
           </div>
         )
@@ -38,3 +41,4 @@ export const ProductList = () => {
     </div>
   )
 }
+// disabled={isAuth ? false : true}
