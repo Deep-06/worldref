@@ -13,7 +13,7 @@ export const Home = () => {
   }, [])
   return (
     <div>
-      <h3>Products</h3>
+      <h3>Home Page</h3>
     <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'20px',padding:'15px'}}>
       {products.length > 0 && products.map((e, i) => {
         return (

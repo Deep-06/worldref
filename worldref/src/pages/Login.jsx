@@ -28,7 +28,7 @@ export const Login = () => {
         }
     };
     return (
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margib: '20px', padding: '30px' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px', padding: '30px' }}>
             <div style={{ width: '40%', backgroundColor: 'lightblue', height: '300px', borderRadius: '10px' }}>
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}
