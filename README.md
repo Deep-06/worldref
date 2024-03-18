@@ -23,6 +23,12 @@
 - Home Page contains card component that displays the card information, including a Title, image, price and description.
 <img src='./worldref/public/home.png'/>
 
-### Backend
-Deploy link: https://worldref.onrender.com
+### Tech Stacks Used
+Backend: Express.js || Node.js || MongoDB || mongoose
+Frontend: React || Redux || react-redux || react-router-dom || axios || styled-components
+
+### Deployment
+Backend Deploy link: https://worldref.onrender.com
 - For Product: https://worldref.onrender.com/api/products/
+
+Frontend Deploy link: https://worldref-six.vercel.app/
