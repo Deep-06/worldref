@@ -24,8 +24,8 @@
 <img src='./worldref/public/home.png'/>
 
 ### Tech Stacks Used
-Backend: Express.js || Node.js || MongoDB || mongoose
-Frontend: React || Redux || react-redux || react-router-dom || axios || styled-components
+- Backend: Express.js || Node.js || MongoDB || mongoose
+- Frontend: React || Redux || react-redux || react-router-dom || axios || styled-components
 
 ### Deployment
 Backend Deploy link: https://worldref.onrender.com
