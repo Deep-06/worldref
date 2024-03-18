@@ -33,7 +33,7 @@ export const Login = () => {
     };
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px', padding: '30px' }}>
-            <div style={{ width: '40%', backgroundColor: 'lightblue', height: '300px', borderRadius: '10px' }}>
+            <div style={{ width: '40%', backgroundColor: 'lightblue',  borderRadius: '10px' }}>
                 <h2>Login</h2>
                 <form onSubmit={handleSubmit}
                     style={{
@@ -47,7 +47,7 @@ export const Login = () => {
                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}
                         style={{ height: '25px' }} />
                     <button type="submit" style={{
-                        height: '30px', width: '20%', alignSelf: 'center',
+                        padding:'10px', alignSelf: 'center',
                         borderRadius: '10px'
                     }}>Login</button>
                 </form>

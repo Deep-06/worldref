@@ -35,7 +35,7 @@ export const Signup = () => {
 
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margib: '20px', padding: '30px' }}>
-      <div style={{ width: '40%', backgroundColor: 'lightblue', height: '400px', borderRadius: '10px' }}>
+      <div style={{ width: '40%', backgroundColor: 'lightblue',  borderRadius: '10px' }}>
         <h2>Register</h2>
         <form onSubmit={handleSubmit} style={{
           display: 'flex', flexDirection: 'column', gap: '15px', padding: '20px',
@@ -52,7 +52,7 @@ export const Signup = () => {
           <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}
             style={{ height: '25px' }} />
           <button type="submit" style={{
-            height: '30px', width: '20%', alignSelf: 'center',
+            padding:'10px', alignSelf: 'center',
             borderRadius: '10px'
           }}>Register</button>
         </form>
