@@ -2,11 +2,11 @@ import React, { useEffect } from 'react'
 import { getProduct } from '../redux/Products/action';
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
- import { products } from "../db"
+ //import { products } from "../db"
 export const ProductList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
- // const products = useSelector((store) => store.productReducer.products);
+  const products = useSelector((store) => store.productReducer.products);
   const isAuth=useSelector((store) => store.authReducer.isAuth);
 
   useEffect(() => {
