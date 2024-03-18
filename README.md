@@ -1,12 +1,12 @@
 # worldref
 
 ### Register page
-- Regster form that takes username and password as inputs and store it in backend
+- Regster form that takes username and password as inputs and store it in localStorage
 <img src='./worldref/public/register.png'/>
 
 ### Login Page
 - Login form that takes username and password as inputs
-- Implemented a login function that checks the credentials and sets the authentication status from the backend
+- Implemented a login function that checks the credentials and sets the authentication status.
 - If the login is successful, update the authentication status to true.
 - If the login fails, display an alert error message.
 <img src='./worldref/public/login.png'/>
@@ -16,7 +16,7 @@
 - Implemented two buttons in the card component.
 - "Add to Cart" button: Cart page is only accessible to authenticated users. 
 - "Check Details" button: Details page is only accessible to authenticated users. 
-- If a non-authenticated user tries to access these buttons, redirect to the login page.
+- Button is disabled for non-authenticated user.
 <img src='./worldref/public/product.png'/>
 
 ### Home Page
