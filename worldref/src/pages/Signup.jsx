@@ -1,20 +1,38 @@
 import React from 'react'
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+//import { postUserRegistration } from '../redux/Authentication/action';
 
 export const Signup = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     handleRegister({ username, email, password });
+    setEmail('');
+    setUsername('');
+    setPassword('');
+    alert('Signup success')
   };
   const handleRegister = (user) => {
     localStorage.setItem('user', JSON.stringify(user));
-    alert('Signup success')
+    navigate('/');
     console.log('User registered successfully:', user);
   };
+
+//   const handlePostUser = async(e) => {
+//     e.preventDefault();
+//     const status = await dispatch(postUserRegistration({ username, email, password }))
+//     if(status===200){
+//       alert('You have successfully registered!');
+//     }else{
+//       alert("Use different email address.");
+//     }
+// }
+
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margib: '20px', padding: '30px' }}>
       <div style={{ width: '40%', backgroundColor: 'lightblue', height: '400px', borderRadius: '10px' }}>

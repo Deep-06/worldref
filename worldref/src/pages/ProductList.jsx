@@ -7,7 +7,7 @@ export const ProductList = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const products = useSelector((store) => store.productReducer.products);
-  const isAuth=useSelector((store) => store.authReducer.isAuth);
+  const isAuth = useSelector(state => state.authReducer.isAuthenticated); 
 
   useEffect(() => {
     const paramObj = {

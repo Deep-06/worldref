@@ -1,24 +1,27 @@
 import React from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 // import { Navigate } from 'react-router-dom';
-
+import { login } from '../redux/Authentication/action.js'; 
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
         e.preventDefault();
         handleLogin({ email, password });
-
+        
     };
     const handleLogin = ({ email, password }) => {
         const user = JSON.parse(localStorage.getItem('user'));
         if (user && user.email === email && user.password === password) {
-            //setIsAuth(true);
+             dispatch(login());
+             navigate('/home');
             alert('Login Success')
-            navigate('/home');
+            
             // <Navigate to="/home"  />
         } else if (!user || user.email !== email) {
             alert('Please Signup')

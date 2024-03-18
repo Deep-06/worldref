@@ -6,9 +6,8 @@ import {  useSelector } from "react-redux";
 export const PrivateRoutes = ({ children }) => {
     const location = useLocation();
 
-    const isAuth=useSelector((store) => store.authReducer.isAuth);
-
-    return isAuth ? (
+    const isAuthenticated = useSelector(state => state.authReducer.isAuthenticated); 
+    return isAuthenticated ? (
         // If authenticated and user email present, render the children
         children
     ) : (
